@@ -1,4 +1,6 @@
 bag
 build
 devel
+pcd
 *.png
+*.pcd
