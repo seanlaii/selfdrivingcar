@@ -128,8 +128,8 @@ void lidar_callback(const sensor_msgs::PointCloud2::ConstPtr &msg) {
 
   std::vector<pcl::PointIndices> cluster_indices;
   pcl::EuclideanClusterExtraction<pcl::PointXYZI> ec;
-  ec.setClusterTolerance (1); // 2cm
-  ec.setMinClusterSize (10);
+  ec.setClusterTolerance (2); // 2cm
+  ec.setMinClusterSize (50);
   ec.setMaxClusterSize (1500);
   ec.setSearchMethod (tree);
   ec.setInputCloud (cloud_filtered);
